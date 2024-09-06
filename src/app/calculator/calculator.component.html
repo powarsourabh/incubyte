@@ -1,0 +1,20 @@
+
+
+
+
+ <div class="container">
+    <h1 class="title">String Calculator</h1>
+    <div class="input-group">
+      <label for="numbers">Enter numbers (use comma, newline, or custom delimiters):</label>
+      <input type="text" id="numbers" [(ngModel)]="inputString" placeholder="Enter numbers..." class="input-field">
+    </div>
+    <button (click)="calculate()" class="btn btn-primary mt-2 calculate-btn">Calculate</button>
+  
+    <div *ngIf="result !== ''" class="mt-4 result-container">
+      <h3>Result: {{ result }}</h3>
+    </div>
+    
+    <div *ngIf="errorMessage !== ''" class="alert alert-danger mt-4 error-container">
+      <strong>Error:</strong> {{ errorMessage }}
+    </div>
+</div>
